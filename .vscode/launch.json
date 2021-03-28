@@ -33,6 +33,25 @@
         "--extensionTestsPath=${workspaceFolder}/out/test"
       ],
       "outFiles": ["${workspaceFolder}/out/test/**/*.js"]
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Launch Yarn Test",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "cwd": "${fileDirname}",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["test"],
+      "outputCapture": "std",
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "presentation": {
+        "hidden": false,
+        "group": "test",
+        "order": 1
+      }
     }
   ]
 }
